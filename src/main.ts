@@ -14,7 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
   template: `
     <div class="container">
       <header class="text-center mb-4">
-        <h1 class="cursive" style="font-size: 3rem; color: #d4a373;">Laura e Gabriel</h1>
+        <h1 class="cursive" style="font-size: 3rem; color: #d4a373;">Gabriel e Laura</h1>
         <p style="font-size: 1.2rem; color: #666;">Convidam para seu casamento</p>
       </header>
 
@@ -35,45 +35,45 @@ import { provideHttpClient } from '@angular/common/http';
           <h3 style="color: #666;">Confirme sua presença</h3>
           <form [formGroup]="confirmationForm" (ngSubmit)="onSubmit()" style="text-align: left;">
             <div class="form-group mb-4">
-              <label for="nomeCompleto">Nome Completo</label>
+              <label for="name">Nome Completo</label>
               <input 
                 type="text" 
-                id="nomeCompleto" 
-                formControlName="nomeCompleto"
+                id="name" 
+                formControlName="name"
                 class="form-control"
                 style="width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ddd; border-radius: 4px;"
               >
-              <div *ngIf="confirmationForm.get('nomeCompleto')?.touched && confirmationForm.get('nomeCompleto')?.invalid" 
+              <div *ngIf="confirmationForm.get('name')?.touched && confirmationForm.get('name')?.invalid" 
                    style="color: red; font-size: 0.8rem; margin-top: 4px;">
                 Nome completo é obrigatório
               </div>
             </div>
 
             <div class="form-group mb-4">
-              <label for="cpf">CPF</label>
+              <label for="document">CPF</label>
               <input 
                 type="text" 
-                id="cpf" 
-                formControlName="cpf"
+                id="document" 
+                formControlName="document"
                 class="form-control"
                 style="width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ddd; border-radius: 4px;"
               >
-              <div *ngIf="confirmationForm.get('cpf')?.touched && confirmationForm.get('cpf')?.invalid" 
+              <div *ngIf="confirmationForm.get('document')?.touched && confirmationForm.get('document')?.invalid" 
                    style="color: red; font-size: 0.8rem; margin-top: 4px;">
                 CPF é obrigatório
               </div>
             </div>
 
             <div class="form-group mb-4">
-              <label for="chave">Chave</label>
+              <label for="key">Chave</label>
               <input 
                 type="text" 
-                id="chave" 
-                formControlName="chave"
+                id="key" 
+                formControlName="key"
                 class="form-control"
                 style="width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ddd; border-radius: 4px;"
               >
-              <div *ngIf="confirmationForm.get('chave')?.touched && confirmationForm.get('chave')?.invalid" 
+              <div *ngIf="confirmationForm.get('key')?.touched && confirmationForm.get('key')?.invalid" 
                    style="color: red; font-size: 0.8rem; margin-top: 4px;">
                 Chave é obrigatória
               </div>
@@ -116,9 +116,9 @@ export class App {
     private confirmationService: ConfirmationService
   ) {
     this.confirmationForm = this.fb.group({
-      nomeCompleto: ['', Validators.required],
-      cpf: ['', Validators.required],
-      chave: ['', Validators.required]
+      name: ['', Validators.required],
+      document: ['', Validators.required],
+      key: ['', Validators.required]
     });
   }
 

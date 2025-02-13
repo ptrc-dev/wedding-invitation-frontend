@@ -3,16 +3,16 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface ConfirmationData {
-  nomeCompleto: string;
-  cpf: string;
-  chave: string;
+  name: string;
+  document: string;
+  key: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfirmationService {
-  private apiUrl = 'SUA_URL_API_AQUI'; // Substitua pela URL real da sua API
+  private apiUrl = 'http://localhost:8080/api/v1/confirmation'; // Substitua pela URL real da sua API
 
   constructor(private http: HttpClient) {}
 
