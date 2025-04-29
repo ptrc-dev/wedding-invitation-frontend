@@ -19,6 +19,7 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
         fullName: '',
         email: '',
         phone: '',
+        key: '',
     });
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,6 +45,7 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
                 fullName: '',
                 email: '',
                 phone: '',
+                key: '',
             });
         }, 1500);
     };
@@ -88,6 +90,20 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="(00) 00000-0000"
+                            required
+                            className="border-wedding-lavender/50 focus:border-wedding-gold"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="phone">Chave</Label>
+                        <Input
+                            id="key"
+                            name="key"
+                            type="tel"
+                            value={formData.key}
+                            onChange={handleChange}
+                            placeholder="e1r1321-12312412"
                             required
                             className="border-wedding-lavender/50 focus:border-wedding-gold"
                         />
