@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+
+  --radius: 0.5rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-montserrat;
+    background-color: #98A077;
+  }
+  
+  h1, h2, h3 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Wedding Specific Styles */
+.wedding-section {
+  @apply w-full py-16 md:py-20 px-4 md:px-8 overflow-hidden;
+}
+
+.wedding-title {
+  @apply font-dancing font-medium text-5xl md:text-6xl mb-8 text-center;
+}
+
+.wedding-subtitle {
+  @apply font-playfair text-2xl md:text-3xl mb-6 text-center;
+}
+
+.wedding-text {
+  @apply font-montserrat text-base md:text-lg text-gray-700 leading-relaxed;
+}
+
+.wedding-card {
+  @apply bg-white/80 backdrop-blur-sm border border-wedding-lavender/30 rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+/* Decorative elements */
+.floral-divider {
+  @apply flex items-center justify-center my-8 opacity-70;
+}
+
+.floral-divider:before,
+.floral-divider:after {
+  content: "";
+  @apply h-px bg-wedding-gold/50 flex-grow;
+}
+
+.floral-divider:before {
+  @apply mr-4;
+}
+
+.floral-divider:after {
+  @apply ml-4;
+}
+
+.floral-divider-icon {
+  @apply text-wedding-gold text-xl;
+}
+
+/* Background patterns and gradients */
+.bg-wedding-pattern {
+  background-color: #98A077;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-rsvp-color {
+  background-color: #68744C
+}
+
+/* Animation classes */
+.animate-on-scroll {
+  @apply opacity-0 transition-all duration-700 ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  @apply opacity-100;
+}
