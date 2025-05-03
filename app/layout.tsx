@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ClientToaster from "./components/ClientToaster";
 
 export const metadata: Metadata = {
   title: "Convite de Casamento",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body
       >
         {children}
+        <ClientToaster />
       </body>
     </html>
   );
