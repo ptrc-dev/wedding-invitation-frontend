@@ -101,7 +101,7 @@
 }
 
 .wedding-title {
-  @apply font-dancing font-medium text-5xl md:text-6xl mb-8 text-center;
+  @apply font-playball font-medium text-5xl md:text-6xl mb-8 text-center;
 }
 
 .wedding-subtitle {
@@ -113,7 +113,7 @@
 }
 
 .wedding-card {
-  @apply bg-white/80 backdrop-blur-sm border border-wedding-lavender/30 rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+  @apply bg-white/80 backdrop-blur-sm border border-wedding-lavender/30 shadow-md hover:shadow-lg transition-all duration-300;
 }
 
 /* Decorative elements */
@@ -146,7 +146,11 @@
 }
 
 .bg-rsvp-color {
-  background-color: #68744c;
+  background-color: #98A077;
+}
+
+.bg-teste-color {
+  background-color: #1A281F;
 }
 
 /* Animation classes */

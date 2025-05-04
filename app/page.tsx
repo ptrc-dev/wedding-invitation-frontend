@@ -66,71 +66,69 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <Header 
-        coupleNames="Gabriel & Laura" 
-        verse='“Assim, eles já não são dois, mas sim uma só carne,
-        portanto, o que Deus uniu, ninguém separa.” MT 19:6'
-        date='10 de Janeiro de 2026'
+      <Header
+        coupleNames="Gabriel & Laura"
+        verse="“Assim, eles já não são dois, mas sim uma só carne,
+        portanto, o que Deus uniu, ninguém separa.” MT 19:6"
+        date="10 de Janeiro de 2026"
         imageUrl="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
         welcomeMessage="Com a bênção de Deus e seus pais convidam carinhosamente para o seu casamento realizado em"
       />
-      
+
       {/* Hero Section with Countdown */}
       <PageSection id="hero" className="bg-wedding-pattern py-6 md:py-24">
-        <HeroSection 
+        <HeroSection
           imageUrl="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           weddingDate={weddingDate}
-          localization={
-            {
-              local: "Rua Noel Nunes Ferraz, 174 - São Cristovão, Arcoverde-PE, 56.512-140",
-              space: "Mãos d’Artes Eventos"
-            }
-          }
+          localization={{
+            local:
+              "Rua Noel Nunes Ferraz, 174 - São Cristovão, Arcoverde-PE, 56.512-140",
+            space: "Mãos d’Artes Eventos",
+          }}
         />
       </PageSection>
-      
-      <Separator className="bg-wedding-gold/10 h-0.5" />
-      
+
+      <Separator className="bg-wedding-button/10 h-0.5" />
+
       {/* Photo Gallery */}
       <PageSection id="gallery" className="bg-gradient-to-b">
         <h2 className="wedding-title mb-12">Nossa História</h2>
         <p className="wedding-text text-center max-w-2xl mx-auto mb-12">
-          Compartilhamos alguns momentos especiais da nossa jornada juntos. Cada foto conta um pedaço da nossa história de amor.
+          Compartilhamos alguns momentos especiais da nossa jornada juntos. Cada
+          foto conta um pedaço da nossa história de amor.
         </p>
         <PhotoCarousel photos={preWeddingPhotos} />
       </PageSection>
-      
-      <Separator className="bg-wedding-gold/10 h-0.5" />
-      
+
+      <Separator className="bg-wedding-button/10 h-0.5" />
+
       {/* RSVP Form */}
       <PageSection id="rsvp" className="bg-gradient-to-b bg-rsvp-color">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-12 bg-rsvp-color/10 p-8 rounded-lg">
           <h2 className="wedding-title">Confirme sua Presença</h2>
           <p className="wedding-text">
-            Sua presença é muito importante para nós! Por favor, confirme abaixo para que possamos preparar tudo com carinho.
+            Sua presença é muito importante para nós! Por favor, confirme abaixo
+            para que possamos preparar tudo com carinho.
           </p>
         </div>
         <RsvpForm />
       </PageSection>
-      
-      <Separator className="bg-wedding-gold/10 h-0.5" />
-      
+
+      <Separator className="bg-wedding-button/10 h-0.5" />
+
       {/* Dress Code */}
       <PageSection id="dress-code">
         <h2 className="wedding-title mb-8">Inspiração de Trajes</h2>
         <p className="wedding-text text-center max-w-2xl mx-auto mb-12">
           Para nos ajudar a criar memórias visuais harmoniosas.
         </p>
-        <DressCode 
-          colorPalette={colorPalette} 
-          outfits={outfitSuggestions}
-        />
+        <DressCode colorPalette={colorPalette} outfits={outfitSuggestions} />
       </PageSection>
-      
+
       {/* Footer */}
       <footer className="w-full py-8">
         <div className="container mx-auto text-center">
-          <p className="font-dancing text-2xl mb-2">Gabriel & Laura</p>
+          <p className="font-playfair-display text-2xl mb-2">Gabriel & Laura</p>
           <p className="text-sm text-gray-600">
             Com amor, esperamos por você em nosso grande dia.
           </p>

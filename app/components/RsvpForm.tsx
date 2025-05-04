@@ -33,21 +33,18 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        `${backendUrl}/confirmation`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            key: formData.key,
-          }),
-        }
-      );
+      const response = await fetch(`${backendUrl}/confirmation`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          key: formData.key,
+        }),
+      });
 
       const data = await response.json();
       toast({
@@ -64,7 +61,6 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
         key: "",
       });
     } catch (error: any) {
-
       if (error instanceof Error) {
         toast({
           title: "Erro",
@@ -86,9 +82,9 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
   };
 
   return (
-    <div className={cn("w-full max-w-md mx-auto", className)}>
-      <div className="wedding-card p-8 backdrop-blur-md">
-        <form onSubmit={handleSubmit} className="space-y-6">
+    <div className={cn("w-full max-w-md md:max-w-lg mx-auto", className)}>
+      <div className="wedding-card p-6 md:p-12 backdrop-blur-md">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="name">Nome Completo</Label>
             <Input
@@ -98,7 +94,7 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
               onChange={handleChange}
               placeholder="Digite seu nome completo"
               required
-              className="border-wedding-lavender/50 focus:border-wedding-gold"
+              className="border-wedding-lavender/50 focus:border-wedding-button"
             />
           </div>
 
@@ -112,7 +108,7 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
               onChange={handleChange}
               placeholder="seu-email@exemplo.com"
               required
-              className="border-wedding-lavender/50 focus:border-wedding-gold"
+              className="border-wedding-lavender/50 focus:border-wedding-button"
             />
           </div>
 
@@ -126,7 +122,7 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
               onChange={handleChange}
               placeholder="(00) 00000-0000"
               required
-              className="border-wedding-lavender/50 focus:border-wedding-gold"
+              className="border-wedding-lavender/50 focus:border-wedding-button"
             />
           </div>
 
@@ -140,13 +136,13 @@ const RsvpForm = ({ className }: RsvpFormProps) => {
               onChange={handleChange}
               placeholder="c2d2d781-9071-462c-844a-1ac382d4adea"
               required
-              className="border-wedding-lavender/50 focus:border-wedding-gold"
+              className="border-wedding-lavender/50 focus:border-wedding-button"
             />
           </div>
 
           <Button
             type="submit"
-            className="w-full bg-wedding-gold hover:bg-wedding-gold/90 text-white font-medium"
+            className="w-full bg-wedding-button hover:bg-wedding-button/90 text-white font-medium"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

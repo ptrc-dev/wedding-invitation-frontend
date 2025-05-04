@@ -42,9 +42,9 @@ const PhotoCarousel = ({ photos, className }: PhotoCarouselProps) => {
         >
           <CarouselContent>
             {photos.map((photo, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="w-full h-full">
                 <div
-                  className="wedding-card p-1 h-72 sm:h-96 cursor-pointer overflow-hidden"
+                  className="wedding-card md:h-[650px] h-[380px] sm:h-96 cursor-pointer overflow-hidden"
                   onClick={() => openFullscreen(photo)}
                 >
                   <img
@@ -57,8 +57,8 @@ const PhotoCarousel = ({ photos, className }: PhotoCarouselProps) => {
             ))}
           </CarouselContent>
           <div className="hidden sm:block">
-            <CarouselPrevious className="border-wedding-gold/50 bg-white/80 text-gray-800 hover:bg-wedding-gold hover:text-white" />
-            <CarouselNext className="border-wedding-gold/50 bg-white/80 text-gray-800 hover:bg-wedding-gold hover:text-white" />
+            <CarouselPrevious className="border-wedding-button/50 bg-white/80 text-gray-800 hover:bg-wedding-button hover:text-white" />
+            <CarouselNext className="border-wedding-button/50 bg-white/80 text-gray-800 hover:bg-wedding-button hover:text-white" />
           </div>
         </Carousel>
 

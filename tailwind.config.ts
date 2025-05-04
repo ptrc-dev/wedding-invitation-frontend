@@ -30,7 +30,8 @@ export default {
 					nude: '#FDE1D3',
 					lavender: '#E5DEFF',
 					olive: '#808000',
-					green: '#98A077'
+					green: '#98A077',
+					button: '#1A281F'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

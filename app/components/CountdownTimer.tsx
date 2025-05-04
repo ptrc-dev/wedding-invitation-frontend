@@ -58,7 +58,7 @@ const CountdownTimer = ({ targetDate, className }: CountdownTimerProps) => {
       {timeUnits.map((unit, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center w-20 md:w-28 h-20 md:h-28 bg-white/60 backdrop-blur-sm shadow-md border border-wedding-gold/20 animate-pulse-soft"
+          className="flex flex-col items-center justify-center w-20 md:w-28 h-20 md:h-28 bg-white/60 backdrop-blur-sm shadow-md border border-wedding-button/20 animate-pulse-soft"
         >
           <span className="text-2xl md:text-4xl font-bold text-gray-800">
             {unit.value.toString().padStart(2, "0")}
