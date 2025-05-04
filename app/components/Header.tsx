@@ -3,6 +3,7 @@ import { cn } from "@/app/lib/utils";
 
 type HeaderProps = {
   coupleNames: string;
+  verse: string;
   date: string;
   location?: string;
   imageUrl: string;
@@ -12,8 +13,8 @@ type HeaderProps = {
 
 const Header = ({
   coupleNames,
+  verse,
   date,
-  location,
   imageUrl,
   welcomeMessage,
   className,
@@ -21,7 +22,7 @@ const Header = ({
   return (
     <header
       className={cn(
-        "min-h-[85vh] flex flex-col items-center justify-center relative overflow-hidden py-12 px-4 md:px-8",
+        "min-h-[100vh] flex flex-col items-center justify-center relative overflow-hidden py-12 px-4 md:px-8",
         className
       )}
     >
@@ -36,11 +37,23 @@ const Header = ({
 
       {/* Content */}
       <div className="container mx-auto max-w-4xl text-center z-10 animate-fade-in">
-        <h4 className="font-dancing text-xl md:text-2xl text-wedding-gold mb-4">
-          Convite de Casamento
+        <img
+          src="flower.png"
+          alt="flower"
+          className="absolute top-5 left-0 w-[60px] h-[700px] md:top-10 md:w-[100px] md:h-[900px] object-contain"
+        />
+
+        <img
+          src="flower.png"
+          alt="flower"
+          className="absolute top-5 right-0 w-[60px] h-[700px] md:top-10 md:w-[100px] md:h-[900px] object-contain transform scale-x-[-1]"
+        />
+
+        <h4 className="font-playball italic text-1xl md:text-2xl text-left mb-4 mb-20">
+          {verse}
         </h4>
 
-        <h1 className="font-dancing text-5xl md:text-7xl lg:text-8xl font-bold mb-8">
+        <h1 className="font-playfair text-7xl md:text-7xl lg:text-8xl font-bold mb-8">
           {coupleNames}
         </h1>
 
@@ -48,13 +61,12 @@ const Header = ({
           <span className="floral-divider-icon">❦</span>
         </div>
 
-        <p className="font-playfair text-xl md:text-2xl lg:text-3xl italic mb-6 text-gray-800">
+        <p className="font-playball text-xl md:text-2xl lg:text-3xl italic mb-6 text-gray-800">
           {welcomeMessage}
         </p>
 
-        <div className="space-y-2 font-montserrat text-lg md:text-xl text-gray-700 mt-8">
+        <div className="space-y-2 font-playball text-3xl md:text-5xl md:mt-20 text-gray-700 mt-8">
           <p className="font-medium">{date}</p>
-          {location && <p>{location}</p>}
         </div>
       </div>
     </header>

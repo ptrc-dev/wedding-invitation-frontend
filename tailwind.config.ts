@@ -30,6 +30,7 @@ export default {
 					nude: '#FDE1D3',
 					lavender: '#E5DEFF',
 					olive: '#808000',
+					green: '#98A077'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -76,9 +77,10 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'playfair': ['Playfair Display', 'serif'],
+				'playfair-display': ['Playfair Display', 'cursive'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'dancing': ['Dancing Script', 'cursive'],
+				'playball': ['Playball', 'cursive'],
 			},
 			keyframes: {
 				'accordion-down': {

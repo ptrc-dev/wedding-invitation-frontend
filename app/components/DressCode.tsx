@@ -3,7 +3,6 @@ import { cn } from "@/app/lib/utils";
 
 type OutfitOption = {
   imageUrl: string;
-  description: string;
 };
 
 type DressCodeProps = {
@@ -25,6 +24,9 @@ const DressCode = ({ colorPalette, outfits, className }: DressCodeProps) => {
         {/* Color Palette */}
         <div className="mb-12">
           <h3 className="wedding-subtitle mb-6">Paleta de Cores</h3>
+          <p className="text-center mb-6">
+            Sugerimos não usar as seguintes opções de cores.
+          </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {colorPalette.map((color, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -39,26 +41,21 @@ const DressCode = ({ colorPalette, outfits, className }: DressCodeProps) => {
         </div>
 
         {/* Outfit Inspirations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Women Outfits */}
           <div>
             <h3 className="text-2xl font-playfair mb-6 text-center">
               Para Elas
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1">
               {outfits.women.map((outfit, index) => (
                 <div key={index} className="wedding-card overflow-hidden">
-                  <div className="h-48 sm:h-64">
+                  <div className="h-96 sm:h-[600px]">
                     <img
                       src={outfit.imageUrl}
                       alt={`Sugestão de roupa feminina ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="p-3 text-center">
-                    <p className="text-sm text-gray-700">
-                      {outfit.description}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -70,20 +67,15 @@ const DressCode = ({ colorPalette, outfits, className }: DressCodeProps) => {
             <h3 className="text-2xl font-playfair mb-6 text-center">
               Para Eles
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1">
               {outfits.men.map((outfit, index) => (
                 <div key={index} className="wedding-card overflow-hidden">
-                  <div className="h-48 sm:h-64">
+                  <div className="h-96 sm:h-[600px]">
                     <img
                       src={outfit.imageUrl}
                       alt={`Sugestão de roupa masculina ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="p-3 text-center">
-                    <p className="text-sm text-gray-700">
-                      {outfit.description}
-                    </p>
                   </div>
                 </div>
               ))}

@@ -10,8 +10,7 @@ import { Separator } from '@/app/components/ui/separator';
 
 const Index = () => {
   // Wedding Date - set to 6 months from now
-  const weddingDate = new Date();
-  weddingDate.setMonth(weddingDate.getMonth() + 6);
+  const weddingDate = new Date('2026-01-10T00:00:00');
   
   // Sample placeholder photos (You can replace these with actual wedding photos)
   const preWeddingPhotos = [
@@ -55,37 +54,11 @@ const Index = () => {
     women: [
       {
         imageUrl: "https://images.unsplash.com/photo-1581404635708-9a5a1d939788?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Vestido longo em tons claros"
-      },
-      {
-        imageUrl: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Vestido médio em tons pastéis"
-      },
-      {
-        imageUrl: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Conjunto elegante em tons nude"
-      },
-      {
-        imageUrl: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Vestido formal em tons lavanda"
       }
     ],
     men: [
       {
         imageUrl: "https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Terno claro com camisa branca"
-      },
-      {
-        imageUrl: "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Camisa social e calça em tom neutro"
-      },
-      {
-        imageUrl: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Blazer em tom escuro com calça clara"
-      },
-      {
-        imageUrl: "https://images.unsplash.com/photo-1619603364904-c0498317e145?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
-        description: "Conjunto casual elegante em tons neutros"
       }
     ]
   };
@@ -95,17 +68,24 @@ const Index = () => {
       {/* Header Section */}
       <Header 
         coupleNames="Gabriel & Laura" 
-        date={`${weddingDate.getDate()}/${weddingDate.getMonth() + 1}/${weddingDate.getFullYear()}`}
-        location="Jardim Botânico, Rio de Janeiro - RJ"
+        verse='“Assim, eles já não são dois, mas sim uma só carne,
+        portanto, o que Deus uniu, ninguém separa.” MT 19:6'
+        date='10 de Janeiro de 2026'
         imageUrl="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-        welcomeMessage="Estamos felizes em compartilhar este momento com vocês!"
+        welcomeMessage="Com a bênção de Deus e seus pais convidam carinhosamente para o seu casamento realizado em"
       />
       
       {/* Hero Section with Countdown */}
-      <PageSection id="hero" className="bg-wedding-pattern py-16 md:py-24">
+      <PageSection id="hero" className="bg-wedding-pattern py-6 md:py-24">
         <HeroSection 
           imageUrl="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           weddingDate={weddingDate}
+          localization={
+            {
+              local: "Rua Noel Nunes Ferraz, 174 - São Cristovão, Arcoverde-PE, 56.512-140",
+              space: "Mãos d’Artes Eventos"
+            }
+          }
         />
       </PageSection>
       
@@ -139,7 +119,7 @@ const Index = () => {
       <PageSection id="dress-code">
         <h2 className="wedding-title mb-8">Inspiração de Trajes</h2>
         <p className="wedding-text text-center max-w-2xl mx-auto mb-12">
-          Para nos ajudar a criar memórias visuais harmoniosas, sugerimos as seguintes opções de cores e estilos.
+          Para nos ajudar a criar memórias visuais harmoniosas.
         </p>
         <DressCode 
           colorPalette={colorPalette} 
