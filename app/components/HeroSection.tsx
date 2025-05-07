@@ -64,10 +64,10 @@ const HeroSection = ({
           <p className="text-2xl md:text-4xl font-playball text-black mb-4 text-center z-10">
             {localization.local}
           </p>
-          <p className="text-lg text-gray-600 mb-10 text-center max-w-md z-10">
-            Estamos ansiosos para celebrar este momento especial com vocês.
-            Marquem em seus calendários!
-          </p>
+
+          {/* <p className="text-lg text-gray-600 mb-10 text-center max-w-md z-10">
+          
+          </p> */}
 
           <CountdownTimer targetDate={weddingDate} />
         </div>

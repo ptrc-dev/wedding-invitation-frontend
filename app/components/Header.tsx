@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/app/lib/utils";
+import DateCard from "./DateCard";
 
 type HeaderProps = {
   coupleNames: string;
@@ -65,9 +66,12 @@ const Header = ({
           {welcomeMessage}
         </p>
 
-        <div className="space-y-2 font-playball text-3xl md:text-5xl md:mt-20 text-gray-700 mt-8">
+        <DateCard date={date} />
+
+        {/* <div className="space-y-2 font-playball text-3xl md:text-5xl md:mt-20 text-gray-700 mt-8">
           <p className="font-medium">{date}</p>
-        </div>
+        </div> */}
+
       </div>
     </header>
   );

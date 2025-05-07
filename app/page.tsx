@@ -46,19 +46,19 @@ const Index = () => {
     { name: "Nude", color: "#FDE1D3" },
     { name: "Dourado", color: "#D4AF37" },
     { name: "Verde Oliva", color: "#808000" },
-    { name: "Lavanda", color: "#E5DEFF" },
+    { name: "Bege", color: "#DCC7A1" },
   ];
   
   // Outfit suggestions
   const outfitSuggestions = {
     women: [
       {
-        imageUrl: "https://images.unsplash.com/photo-1581404635708-9a5a1d939788?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
+        imageUrl: "vestido.png",
       }
     ],
     men: [
       {
-        imageUrl: "https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80",
+        imageUrl: "masculino.png",
       }
     ]
   };
@@ -70,7 +70,7 @@ const Index = () => {
         coupleNames="Gabriel & Laura"
         verse="“Assim, eles já não são dois, mas sim uma só carne,
         portanto, o que Deus uniu, ninguém separa.” MT 19:6"
-        date="10 de Janeiro de 2026"
+        date="Janeiro 10 2026"
         imageUrl="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
         welcomeMessage="Com a bênção de Deus e seus pais convidam carinhosamente para o seu casamento realizado em"
       />
