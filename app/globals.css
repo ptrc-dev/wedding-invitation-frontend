@@ -149,10 +149,6 @@
   background-color: #98A077;
 }
 
-.bg-teste-color {
-  background-color: #1A281F;
-}
-
 /* Animation classes */
 .animate-on-scroll {
   @apply opacity-0 transition-all duration-700 ease-out;

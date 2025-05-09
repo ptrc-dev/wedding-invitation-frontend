@@ -56,7 +56,7 @@ const PhotoCarousel = ({ photos, className }: PhotoCarouselProps) => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="hidden sm:block">
+          <div className="sm:block">
             <CarouselPrevious className="border-wedding-button/50 bg-white/80 text-gray-800 hover:bg-wedding-button hover:text-white" />
             <CarouselNext className="border-wedding-button/50 bg-white/80 text-gray-800 hover:bg-wedding-button hover:text-white" />
           </div>

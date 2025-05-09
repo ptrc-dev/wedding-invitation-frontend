@@ -30,12 +30,12 @@ const DressCode = ({ colorPalette, outfits, className }: DressCodeProps) => {
             </h3>
             <div className="grid grid-cols-1">
               {outfits.women.map((outfit, index) => (
-                <div key={index} className="wedding-card overflow-hidden">
-                  <div className="h-96 sm:h-[600px]">
+                <div key={index} className="overflow-hidden">
+                  <div className="h-96 sm:h-[700px]">
                     <img
                       src={outfit.imageUrl}
                       alt={`Sugestão de roupa feminina ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
                 </div>
@@ -50,12 +50,12 @@ const DressCode = ({ colorPalette, outfits, className }: DressCodeProps) => {
             </h3>
             <div className="grid grid-cols-1">
               {outfits.men.map((outfit, index) => (
-                <div key={index} className="wedding-card overflow-hidden">
-                  <div className="h-96 sm:h-[600px]">
+                <div key={index} className="overflow-hidden">
+                  <div className="h-96 sm:h-[700px]">
                     <img
                       src={outfit.imageUrl}
                       alt={`Sugestão de roupa masculina ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
                 </div>

@@ -23,7 +23,7 @@ const HeroSection = ({
     <div className={cn("bg-wedding-pattern py-6 md:py-24", className)}>
       <div className="container mx-auto grid md:grid-cols-2 gap-10 md:gap-12 px-4 md:px-8">
         {/* Left column: Photo */}
-        <div className="relative md:top-[-100px] w-full max-w-lg">
+        <div className="relative w-full max-w-lg">
           {/* Imagem maior (fundo) */}
           <div className="absolutetop-0 left-0 w-full h-auto z-0">
             <img
@@ -34,7 +34,7 @@ const HeroSection = ({
           </div>
 
           {/* Imagem menor (frente) */}
-          <div className="absolute top-[115px] md:top-20 md:left-30 w-full h-auto md:top-[250px] md:left-[150px] z-10">
+          <div className="absolute top-[115px] right-0 md:top-[250px] md:left-[150px] w-auto h-auto">
             <img
               src={imageUrl}
               alt="Imagem menor"
@@ -48,22 +48,33 @@ const HeroSection = ({
           <img
             src="roses.png"
             alt="flower"
-            className="absolute right-0 z-0 md:w-[600px] w-[250px] md:top-[1250px] top-[1300px]"
+            className="absolute right-0 z-0 md:w-[600px] w-[250px] md:top-[1250px] top-[1350px]"
           />
 
           <img
             src="roses.png"
             alt="flower"
-            className="absolute scale-x-[-1] left-0 z-0 md:w-[600px] w-[250px] md:top-[1450px] top-[1300px]"
+            className="absolute left-0 z-0 md:w-[600px] w-[250px] md:top-[1450px] top-[1350px] scale-x-[-1]"
           />
+
           <h2 className="font-playfair font-bold text-3xl md:text-4xl mb-6 text-center flex items-center gap-2 z-10">
             <FaMapMarkerAlt className="text-black" />{" "}
             {/* Ícone de localização */}
             {localization.space}
           </h2>
+
           <p className="text-2xl md:text-4xl font-playball text-black mb-4 text-center z-10">
             {localization.local}
           </p>
+
+          <div className="relative w-full mb-5 max-w-4xl aspect-video overflow-hidden shadow-lg z-10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!4v1746754064191!6m8!1m7!1sn-BN8MACyYbjk6Eyoh_wFQ!2m2!1d-8.416275557847257!2d-37.06580058138471!3f79.69784777002825!4f-0.9128390697278235!5f0.7820865974627469"
+              className="w-full h-full"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
 
           {/* <p className="text-lg text-gray-600 mb-10 text-center max-w-md z-10">
           

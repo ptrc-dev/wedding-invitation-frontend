@@ -36,25 +36,26 @@ const Header = ({
         style={{ backgroundImage: `url(${imageUrl})` }}
       ></div>
 
+      <img
+        src="flower.png"
+        alt="flower"
+        className="absolute top-1 left-0 w-[60px] h-[700px] md:top-10 md:w-[100px] md:h-[900px] object-contain"
+      />
+
+      <img
+        src="flower.png"
+        alt="flower"
+        className="absolute top-1 right-0 w-[60px] h-[700px] md:top-10 md:w-[100px] md:h-[900px] object-contain transform scale-x-[-1]"
+      />
+
       {/* Content */}
       <div className="container mx-auto max-w-4xl text-center z-10 animate-fade-in">
-        <img
-          src="flower.png"
-          alt="flower"
-          className="absolute top-5 left-0 w-[60px] h-[700px] md:top-10 md:w-[100px] md:h-[900px] object-contain"
-        />
-
-        <img
-          src="flower.png"
-          alt="flower"
-          className="absolute top-5 right-0 w-[60px] h-[700px] md:top-10 md:w-[100px] md:h-[900px] object-contain transform scale-x-[-1]"
-        />
 
         <h4 className="font-playball italic text-1xl md:text-2xl text-left mb-4 mb-20">
           {verse}
         </h4>
 
-        <h1 className="font-playfair text-7xl md:text-7xl lg:text-8xl font-bold mb-8">
+        <h1 className="font-playfair text-6xl md:text-7xl lg:text-8xl font-bold mb-8 mt-[80px]">
           {coupleNames}
         </h1>
 
@@ -67,10 +68,6 @@ const Header = ({
         </p>
 
         <DateCard date={date} />
-
-        {/* <div className="space-y-2 font-playball text-3xl md:text-5xl md:mt-20 text-gray-700 mt-8">
-          <p className="font-medium">{date}</p>
-        </div> */}
 
       </div>
     </header>

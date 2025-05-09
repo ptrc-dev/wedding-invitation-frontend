@@ -53,12 +53,12 @@ const Index = () => {
   const outfitSuggestions = {
     women: [
       {
-        imageUrl: "vestido.png",
+        imageUrl: "vestido-sf.png",
       }
     ],
     men: [
       {
-        imageUrl: "masculino.png",
+        imageUrl: "masculino-sf.png",
       }
     ]
   };
@@ -70,7 +70,7 @@ const Index = () => {
         coupleNames="Gabriel & Laura"
         verse="“Assim, eles já não são dois, mas sim uma só carne,
         portanto, o que Deus uniu, ninguém separa.” MT 19:6"
-        date="Janeiro 10 2026"
+        date="Sábado Janeiro 10 2026 ÀS 16H"
         imageUrl="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
         welcomeMessage="Com a bênção de Deus e seus pais convidam carinhosamente para o seu casamento realizado em"
       />
